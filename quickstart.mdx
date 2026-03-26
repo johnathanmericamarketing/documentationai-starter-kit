@@ -1,0 +1,143 @@
+---
+title: Getting Started with Your Documentation Space
+description: Learn how to set up your account and create your first documentation page in under 5 minutes.
+---
+
+## Prerequisites
+
+Before you begin, ensure you have the following ready:
+
+<Callout kind="info">
+
+- A valid email address for registration
+- Modern web browser (`Chrome`, `Firefox`, or `Safari`)
+- Optional: GitHub account for version control integration
+
+</Callout>
+
+No prior experience with MDX or documentation platforms is required. This guide walks you through everything step by step.
+
+## Register and Access Your Account
+
+Start by creating your Clarity Labs USA documentation space account.
+
+<Steps>
+  <Step title="Sign Up" icon="user-plus">
+    Visit `https://docs.example.com/signup` and enter your email and password.
+    
+    Confirm your email via the verification link sent to your inbox.
+  </Step>
+  <Step title="Log In" icon="log-in">
+    Navigate to `https://docs.example.com/login`.
+    
+    Enter your credentials to access the dashboard.
+  </Step>
+</Steps>
+
+<Callout kind="tip">
+  Enable two-factor authentication during setup for added security.
+</Callout>
+
+## Navigate to the Dashboard
+
+Once logged in, you land on the main dashboard.
+
+<Columns cols={2}>
+  <Card title="Workspace Overview" icon="layout" href="/introduction">
+    View all your documentation projects and recent edits.
+  </Card>
+  <Card title="Quick Actions" icon="zap" href="/guides">
+    Access templates, import options, and search functionality.
+  </Card>
+</Columns>
+
+From here, select **New Workspace** to create your Clarity Labs USA documentation space.
+
+## Create and Edit Your First Page
+
+Use the built-in editor to build pages with MDX components.
+
+<Tabs>
+  <Tab title="Visual Editor" icon="edit-3">
+    Drag and drop components like `<Callout>` and `<Steps>`.
+    
+    Preview changes in real-time without writing code.
+  </Tab>
+  <Tab title="MDX Editor" icon="code">
+    Write raw MDX with syntax highlighting.
+    
+````mdx
+## Welcome
+
+<Callout kind="success">
+  Your first page is live!
+</Callout>
+````
+  </Tab>
+</Tabs>
+
+Publish by clicking **Save and Deploy**. Your page goes live instantly.
+
+## Basic Workspace Setup
+
+Configure your space for Clarity Labs USA documentation.
+
+<Steps>
+  <Step title="Set Workspace Name" icon="settings">
+    Enter "Clarity Labs USA Docs" as the title.
+    
+    Add description: "Research-grade peptides documentation."
+  </Step>
+  <Step title="Customize Theme" icon="palette">
+    Set primary color to `#245995`.
+    
+    Upload logo from `https://claritylabsusa.com/Logo/icon_no_background.webp`.
+  </Step>
+  <Step title="Add Navigation" icon="menu">
+    Create links to `/shop`, `/about`, and `/faq`.
+  </Step>
+</Steps>
+
+<CodeGroup tabs="YAML,JSON">
+```yaml
+title: Clarity Labs USA
+description: Research-grade peptides with transparent COAs
+theme:
+  primaryColor: "#245995"
+```
+```json
+{
+  "title": "Clarity Labs USA",
+  "description": "Research-grade peptides with transparent COAs",
+  "theme": {
+    "primaryColor": "#245955"
+  }
+}
+```
+</CodeGroup>
+
+## Next Steps
+
+Explore advanced features to enhance your documentation.
+
+<Columns cols={3}>
+  <Card title="Authentication" icon="shield" href="/authentication">
+    Secure your docs with user logins and API keys.
+  </Card>
+  <Card title="Custom Components" icon="puzzle" href="/components">
+    Build reusable UI elements for peptides research guides.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="/changelog">
+    Track changes with Git integration.
+  </Card>
+</Columns>
+
+<Expandable title="Troubleshooting Common Issues" default-open="false">
+  
+- **Login fails?** Check your email verification status.
+- **Editor freezes?** Clear browser cache and reload.
+- **Deploy errors?** Verify YAML frontmatter has no blank lines.
+
+</Expandable>
+
+Your documentation space is now ready. Customize pages for peptides COAs, research guides, and FAQs to match Clarity Labs USA standards.

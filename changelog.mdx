@@ -1,0 +1,106 @@
+---
+title: Changelog
+description: Track the latest updates, improvements, and new features in the Clarity Labs USA documentation platform.
+---
+
+## Recent Releases
+
+Follow the latest enhancements to the Clarity Labs USA documentation platform. You can review changes by version below, grouped by release date.
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added support for custom brand colors in the documentation theme, including `#245995` for Clarity Labs USA branding.
+- Introduced expandable FAQ sections for better organization of research-grade documentation.
+
+## Improvements
+
+- Enhanced search functionality with peptide-specific terminology highlighting.
+- Optimized page load times by `>30%` for documentation pages.
+
+## Bug Fixes
+
+- Fixed navigation links breaking on mobile devices.
+- Resolved rendering issues with nested code blocks in Steps components.
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Integrated `Update` components for streamlined changelog management.
+- Added Columns and Cards layouts for showcasing product features like tissue repair peptides.
+
+## Bug Fixes
+
+- Corrected YAML frontmatter parsing errors in MDX files.
+- Patched special character escaping for `{API_KEY}` and `<100ms` in prose.
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["breaking", "feature"]}>
+
+## New Features
+
+- Launched initial documentation platform with core components like Steps, Tabs, and Callout.
+- Enabled multi-language code examples via CodeGroup for research workflows.
+
+## Breaking Changes
+
+- Updated component attribute syntax to require double quotes for strings.
+
+</Update>
+
+## Upcoming Features
+
+Watch for these enhancements in future releases to improve your documentation experience.
+
+<Columns cols={2}>
+  <Card title="Advanced Search" icon="search" href="/search">
+    Semantic search across all peptide documentation and COA files.
+  </Card>
+  <Card title="Version Compare" icon="git-branch" href="/compare">
+    Side-by-side diffs for changelog entries and page updates.
+  </Card>
+  <Card title="API Integration" icon="code" href="/api">
+    Programmatic access to documentation updates and testing data.
+  </Card>
+  <Card title="Custom Themes" icon="palette" href="/themes">
+    Full customization for Clarity Labs USA branding and slogans.
+  </Card>
+</Columns>
+
+## How to Stay Updated
+
+Follow these steps to ensure you never miss a release.
+
+<Steps>
+  <Step title="Subscribe to Notifications" icon="bell">
+    Enable email alerts for new versions in your account settings.
+  </Step>
+  <Step title="Check RSS Feed" icon="rss">
+    Add the changelog RSS to your reader: `https://docs.claritylabsusa.com/changelog.rss`.
+  </Step>
+  <Step title="Join Community" icon="users">
+    Participate in the Clarity Labs USA researcher forum for early previews.
+  </Step>
+</Steps>
+
+<Tabs>
+  <Tab title="GitHub" icon="github">
+    Watch the repository for commits and releases.
+  </Tab>
+  <Tab title="Email" icon="mail">
+    Sign up at `https://claritylabsusa.com/subscribe`.
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">
+  This changelog serves as a starter template. Customize the `Update` components with your actual Clarity Labs USA platform releases.
+</Callout>
+
+<Expandable title="Contribution Guidelines" default-open="false">
+  You can suggest changes via pull requests. Focus on MDX syntax compliance and component usage.
+</Expandable>

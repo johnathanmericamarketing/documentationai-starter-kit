@@ -1,0 +1,123 @@
+---
+title: Core Features and Use Cases
+description: Explore the essential tools and capabilities for organizing, collaborating on, and maintaining project documentation.
+---
+
+## Overview
+
+Clarity Labs USA documentation provides powerful features for managing research project files, from peptide testing protocols to COA organization. You can structure content hierarchically, collaborate in real-time, search efficiently, and apply these tools to research workflows. These capabilities ensure your documentation stays organized and accessible.
+
+<Callout kind="info">
+  Start by creating a folder structure for your projects, such as `Peptides/BPC-157/COAs` and `Testing/Retatrutide`.
+</Callout>
+
+## Document Organization and Hierarchies
+
+Build intuitive hierarchies to categorize research notes, protocols, and analysis. Folders support unlimited nesting, making it easy to group related content like tissue repair studies under `Research/Tissue-Repair`.
+
+<Columns cols={2}>
+  <Card title="Nested Folders" icon="folder" href="/guides/folders">
+    Create unlimited subfolders for granular organization, such as `GLP-1/Retatrutide/Dosage-Testing`.
+  </Card>
+  <Card title="Page Linking" icon="link" href="/guides/linking">
+    Link pages across hierarchies using relative paths like `[BPC-157 Protocol](/Peptides/BPC-157/protocol.mdx)`.
+  </Card>
+  <Card title="Frontmatter Tags" icon="tag" href="/guides/tags">
+    Add metadata like `tags: ["peptide", "COA"]` for better discoverability.
+  </Card>
+  <Card title="Custom Navigation" icon="menu" href="/guides/navigation">
+    Generate dynamic sidebars from your folder structure.
+  </Card>
+</Columns>
+
+### Setting Up Your Hierarchy
+
+Follow these steps to organize a research project:
+
+<Steps>
+  <Step title="Create Root Folders" icon="folder-plus">
+    Set up top-level folders like `Compounds`, `Testing`, and `Reports`.
+  </Step>
+  <Step title="Add Subfolders" icon="folder">
+    Nest content: `Compounds/BPC-157/COAs/2024-10`.
+  </Step>
+  <Step title="Link Pages" icon="link">
+    Use markdown links: `[View COA](/Compounds/BPC-157/COAs/batch-001.mdx)`.
+  </Step>
+</Steps>
+
+## Collaboration and Version Control
+
+Invite team members to edit documentation simultaneously. Changes track automatically with version history, diffs, and rollback options.
+
+<Tabs>
+  <Tab title="Invite Collaborators" icon="users">
+    Share read/write access via email invites. Set permissions for `view`, `edit`, or `admin`.
+  </Tab>
+  <Tab title="Version History" icon="git-branch">
+    View change logs and restore previous versions. Each edit creates a snapshot.
+  </Tab>
+  <Tab title="Real-Time Edits" icon="edit-3">
+    Multiple users edit the same page with live cursors and conflict resolution.
+  </Tab>
+</Tabs>
+
+<CodeGroup tabs="Markdown Config,API Integration">
+  ```yaml
+  # frontmatter example for collaboration
+  ---
+  title: BPC-157 Testing Protocol
+  collaborators: ["researcher@claritylabsusa.com", "lab@claritylabsusa.com"]
+  version: "1.2"
+  ---
+  ```
+  ```javascript
+  // Embed version control in apps
+  const updateDoc = async (content) => {
+    await fetch('/api/docs/BPC-157/protocol', {
+      method: 'PUT',
+      body: JSON.stringify({ content, version: '1.3' })
+    });
+  };
+  ```
+</CodeGroup>
+
+## Search and Filtering Tools
+
+Quickly find content with full-text search, tag filters, and advanced queries. Filter by `peptide`, `batch`, or date for research efficiency.
+
+| Feature | Description | Example Query |
+|---------|-------------|---------------|
+| Full-Text Search | Searches titles, content, and frontmatter | `BPC-157 COA` |
+| Tag Filters | Filter by metadata tags | `tags:GLP-1` |
+| Date Range | Narrow by creation/modified dates | `modified:>2024-01-01` |
+| Advanced | Boolean operators and phrases | `"Retatrutide testing" AND batch:002` |
+
+## Use Cases for Research Projects
+
+Apply these features to real research scenarios.
+
+<ExpandableGroup>
+  <Expandable title="Peptide Batch Tracking" default-open="true">
+    Organize COAs per batch: `Peptides/Retatrutide/COAs/Batch-2024-10-15.mdx`. Use search for `purity >99%`.
+  </Expandable>
+  <Expandable title="Team Protocol Sharing">
+    Collaborate on testing protocols with version control. Roll back if a dosage changes.
+  </Expandable>
+  <Expandable title="Literature Reviews">
+    Hierarchy: `References/Tissue-Repair/BPC-157`. Tag with `["study", "2024"]` for filtering.
+  </Expandable>
+</ExpandableGroup>
+
+<Columns cols={2}>
+  <Card title="Next: Quickstart" icon="book-open" href="/quickstart">
+    Set up your first research project.
+  </Card>
+  <Card title="Authentication" icon="shield" href="/authentication">
+    Secure access for lab teams.
+  </Card>
+</Columns>
+
+<Callout kind="tip">
+  Customize hierarchies to match your lab workflows, such as grouping by compound or testing phase.
+</Callout>
